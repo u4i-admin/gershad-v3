@@ -1,0 +1,7 @@
+{% extends "admin/change_form.html" %}
+
+{% block content %}
+    <h3 style="color:orangered;">WARNING: Saving or updating the data will delete all trained models and cluster groups. Hotzone clusters will not be deleted.</h3>
+    {{ block.super }}
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static admin_modify %}
+{% load leaflet_tags %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    {% leaflet_css %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+    <style>
+    .geosearch .results {
+        color: black;
+        background: white;
+    }
+    </style>
+  {% endblock %}
+
+  {% block admin_change_form_document_ready %}
+    {{ block.super }}
+    <script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+    <script>
+        window.addEventListener("map:init", function (event) {
+            var map = event.detail.map; 
+            L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            const provider = new GeoSearch.OpenStreetMapProvider();
+            const search = new GeoSearch.GeoSearchControl({
+            provider: new GeoSearch.OpenStreetMapProvider(),
+            });
+            map.addControl(search);
+
+            // Get django context data
+            const latitude = '{{ latitude }}'
+            const longitude = '{{ longitude }}'
+            const reports = JSON.parse('{{ reports_locations }}')
+
+            // Set map view
+            map.setView([latitude, longitude], 10);
+
+            // Add cluster centroid and modify color
+            var marker = L.marker([latitude, longitude], { opacity : 0.7 }).addTo(map)
+            marker._icon.style.filter = "hue-rotate(120deg)"
+
+            // Add reports in the cluster
+            for (let i = 0; i < reports.length; i++)  {
+                var marker = L.marker(reports[i], { opacity : 0.5 }).addTo(map)
+                marker._icon.style.filter = "hue-rotate(220deg)"
+            }
+        });
+    </script>
+{% endblock %}
+

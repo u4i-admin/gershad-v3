@@ -1,0 +1,30 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static leaflet_tags %}
+
+{% block extrastyle %}
+{{ block.super }}
+{% leaflet_css plugins="ALL" %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+<style>
+  .geosearch .results {
+    color: black;
+    background: white;
+  }
+</style>
+{% endblock %}
+
+{% block admin_change_form_document_ready %}
+{{ block.super }}
+<script src="https://unpkg.com/leaflet-geosearch@latest/dist/bundle.min.js"></script>
+<script>
+  window.addEventListener("map:init", function (event) {
+    var map = event.detail.map; // Get reference to map
+    L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    const provider = new GeoSearch.OpenStreetMapProvider();
+    const search = new GeoSearch.GeoSearchControl({
+    provider: new GeoSearch.OpenStreetMapProvider(),
+    });
+    map.addControl(search);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,479 @@
+"""
+Can only be resolved by valid tokens.
+
+When the condition fails, the following can be returned (following this priority):
+1) `OperationInfo`/`OperationMessage` if those types are allowed at the return type
+2) `null` in case the field is not mandatory (e.g. `String` or `[String]`)
+3) An empty list in case the field is a list (e.g. `[String]!`)
+4) An empty `Connection` in case the return type is a relay connection
+2) Otherwise, an error will be raised
+"""
+directive @checkCognitoUserMutationExtension repeatable on FIELD_DEFINITION
+
+type BestPracticesPageNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  title: String!
+  slug: String!
+  numchild: Int!
+  urlPath: String!
+  seoTitle: String!
+  searchDescription: String!
+  titles: [BestPracticesTitleBlock!]
+}
+
+type BestPracticesTitleBlock {
+  titleId: Int!
+  title: String!
+  storyText: RichTextFieldType!
+  expertAnalysis: [ExpertAnalysisBlock!]
+  titleFootnotes: [FootnoteType]
+}
+
+type ChapterBlock {
+  chapterId: Int!
+  title: String!
+  description: RichTextFieldType!
+  sections: [ChapterSectionBlock!]
+  chapterFootnotes: [FootnoteType]
+}
+
+type ChapterSectionBlock {
+  sectionId: Int!
+  title: String!
+  description: RichTextFieldType!
+  sectionText: RichTextFieldType!
+  sectionFootnotes: [FootnoteType]
+}
+
+enum ClientTypeEnum {
+  ANDROID
+  IOS
+  TELEGRAM
+  WEB
+  ADMIN
+  NA
+}
+
+"""Date (isoformat)"""
+scalar Date
+
+input DateFilterLookup {
+  exact: Date
+  iExact: Date
+  contains: Date
+  iContains: Date
+  inList: [Date!]
+  gt: Date
+  gte: Date
+  lt: Date
+  lte: Date
+  startsWith: Date
+  iStartsWith: Date
+  endsWith: Date
+  iEndsWith: Date
+  range: [Date!]
+  isNull: Boolean
+  regex: String
+  iRegex: String
+  nExact: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIExact: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nContains: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIContains: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nInList: [Date!] @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nGt: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nGte: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nLt: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nLte: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nStartsWith: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIStartsWith: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nEndsWith: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIEndsWith: Date @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nRange: [Date!] @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIsNull: Boolean @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nRegex: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIRegex: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+}
+
+"""Date with time (isoformat)"""
+scalar DateTime
+
+"""Decimal (fixed-point)"""
+scalar Decimal
+
+"\n    Mutation Errors messages and codes mapped to\n    fields or non fields errors.\n    Example:\n    {\n        field_name: [\n            {\n                \"message\": \"error message\",\n                \"code\": \"error_code\"\n            }\n        ],\n        other_field: [\n            {\n                \"message\": \"error message\",\n                \"code\": \"error_code\"\n            }\n        ],\n        nonFieldErrors: [\n            {\n                \"message\": \"error message\",\n                \"code\": \"error_code\"\n            }\n        ]\n    }\n    "
+scalar ExpectedError
+
+type ExpertAnalysisBlock {
+  expertId: Int!
+  title: String!
+  analysis: RichTextFieldType!
+  analysisFootnotes: [FootnoteType]
+}
+
+type FAQBlock {
+  faqId: Int!
+  title: String!
+  description: RichTextFieldType!
+  faqText: RichTextFieldType!
+  faqFootnotes: [FootnoteType]
+}
+
+""""""
+scalar FlatTags
+
+"\n    Type to represent a footnote, e.g:\n    {\n        \"uuid\": \"41ae8f0e-d348-44aa-9067-5a56bcc083e5\",\n        \"text\": \"<p data-block-key=\"chnrx\">Test Footnote Text </p>\"\n    }\n    "
+scalar FootnoteType
+
+"""
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+"""
+scalar GlobalID @specifiedBy(url: "https://relay.dev/graphql/objectidentification.htm")
+
+type HotZoneClustertNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  pk: Int!
+  centroidLocation: PointFieldType!
+  hotzoneLevel: Int!
+  countPerType: [ReportsTypeCount]
+  totalReportsCount: Int!
+}
+
+type HotZoneClustertNodeConnection {
+  """Pagination data for this connection"""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection"""
+  edges: [HotZoneClustertNodeEdge!]!
+
+  """Total quantity of existing nodes."""
+  totalCount: Int
+  edgeCount: Int
+}
+
+"""An edge in a connection."""
+type HotZoneClustertNodeEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: HotZoneClustertNode!
+}
+
+type ImageBlock {
+  id: UUID!
+  image: ImageNode
+}
+
+type ImageNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  focalPointX: Int
+  focalPointY: Int
+  focalPointWidth: Int
+  focalPointHeight: Int
+  width: Int!
+  height: Int!
+  fileSize: Int
+  fileHash: String!
+  title: String!
+  file: String!
+  createdAt: DateTime!
+  rendition(max: String, min: String, width: Int, height: Int, fill: String, format: String, bgcolor: String, jpegquality: Int): ImageRendition
+  renditionList(sizes: [Int] = []): ImageRenditionList
+  tags: [FlatTags]
+}
+
+type ImageRendition {
+  id: UUID!
+  url: String
+  width: Int
+  height: Int
+}
+
+type ImageRenditionList {
+  renditionList: [ImageRendition!]
+  srcSet: String
+}
+
+type IssueBlock {
+  issueId: Int!
+  title: String!
+  description: RichTextFieldType!
+  faqs: [FAQBlock]
+  issueFootnotes: [FootnoteType]
+}
+
+type KnowYourRightsPageNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  title: String!
+  slug: String!
+  numchild: Int!
+  urlPath: String!
+  seoTitle: String!
+  searchDescription: String!
+  faqTitle: String!
+  faqDescription: RichTextFieldType!
+  faqFootnotes: [FootnoteType]
+  chapters: [ChapterBlock!]
+  faqTopics: [TopicBlock!]
+}
+
+type Mutation {
+  createReport(longitude: Decimal!, latitude: Decimal!, permanent: Boolean!, reportType: String!, address: String!, token: String!, client: ClientTypeEnum!): ReportOutput! @checkCognitoUserMutationExtension
+  updateReport(pk: Int!, token: String!, longitude: Decimal!, latitude: Decimal!, permanent: Boolean!, verified: Boolean!, reportType: String!, address: String!, description: String = null): ReportOutput! @checkCognitoUserMutationExtension
+  deleteReport(pk: Int!, token: String!): MutationOutput! @checkCognitoUserMutationExtension
+  createPointOfInterest(token: String!, arn: String!, latitude: Decimal!, longitude: Decimal!, address: String!): PointOfInterestOutput! @checkCognitoUserMutationExtension
+  updatePointOfInterest(pk: Int!, token: String!, latitude: Decimal!, longitude: Decimal!, address: String!): PointOfInterestOutput! @checkCognitoUserMutationExtension
+  deletePointOfInterest(pk: Int!, token: String!): MutationOutput! @checkCognitoUserMutationExtension
+}
+
+type MutationOutput {
+  success: Boolean!
+  errors: ExpectedError
+}
+
+"""An object with a Globally Unique ID"""
+interface Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+}
+
+input OffsetPaginationInput {
+  offset: Int! = 0
+  limit: Int! = -1
+}
+
+"""Information to aid in pagination."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"\n    Type that represents report location,\n    e.g.:\n    {\n        \"x\": 50.123456,\n        \"y\": 30.123456\n    }\n    "
+scalar PointFieldType
+
+type PointOfInterestNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  pk: Int!
+  token: String!
+  address: String!
+  arn: String!
+  location: PointFieldType!
+  requested: DateTime!
+  created: DateTime!
+  modified: DateTime!
+}
+
+type PointOfInterestOutput {
+  success: Boolean!
+  errors: ExpectedError
+  pointOfInterest: PointOfInterestNode
+}
+
+type Query {
+  report(pk: Int!): ReportNode
+  reports(token: String = null, longitude: Decimal = null, latitude: Decimal = null, east: Decimal = null, west: Decimal = null, north: Decimal = null, south: Decimal = null, radius: Int = null): [ReportGroupNode!]
+  pointOfInterest(pk: Int!, token: String!): PointOfInterestNode
+  pointsOfInterest(token: String, orderBy: [String]): [PointOfInterestNode!]
+  reportsNearPoi(after: Float!, token: String): [ReportGroupNode!]
+  hotzones(before: String = null, after: String = null, first: Int = null, last: Int = null, offset: Int = null): HotZoneClustertNodeConnection
+  staticPage(slug: String!): StaticPageNode
+  staticPages(
+    orderBy: [String]
+    pagination: OffsetPaginationInput
+    filters: StaticPageFilter
+
+    """Returns the items in the list that come before the specified cursor."""
+    before: String = null
+
+    """Returns the items in the list that come after the specified cursor."""
+    after: String = null
+
+    """Returns the first n items from the list."""
+    first: Int = null
+
+    """Returns the items in the list that come after the specified cursor."""
+    last: Int = null
+  ): StaticPageNodeConnection!
+  knowYourRightsPage: KnowYourRightsPageNode
+  bestPracticesPage: BestPracticesPageNode
+  userGuidePage: UserGuidePageNode
+}
+
+type QuestionBlock {
+  question: String!
+  answer: String!
+  icon: ImageBlock!
+}
+
+type ReportGroupNode {
+  lastUpdate: String!
+  centroidLatitude: Float!
+  centroidLongitude: Float!
+  verified: Boolean!
+  faded: Float!
+  score: Float!
+  permanent: Boolean!
+  reportCount: Int!
+  reports: [ReportNode!]
+  firstCreated: DateTime!
+  highestPk: Int!
+}
+
+type ReportNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  pk: Int!
+  address: String!
+  description: String
+  verified: Boolean!
+  permanent: Boolean!
+  requested: DateTime!
+  created: DateTime!
+  modified: DateTime!
+  location: PointFieldType!
+  type: ReportTypeNode!
+  reporter: ReporterNode
+  token(token: String = null): String!
+  client: String!
+}
+
+type ReportOutput {
+  success: Boolean!
+  errors: ExpectedError
+  reportGroups: [ReportGroupNode!]
+}
+
+type ReportTypeNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  name: String!
+  description: String
+}
+
+type ReporterNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  pk: Int!
+}
+
+type ReportsTypeCount {
+  reportType: String!
+  reportsCount: Int!
+}
+
+"""Serialises RichText content into fully baked HTML"""
+scalar RichTextFieldType
+
+input StaticPageFilter {
+  title: StrFilterLookup
+  published: DateFilterLookup
+  slug: StrFilterLookup
+  AND: StaticPageFilter
+  OR: StaticPageFilter
+  NOT: StaticPageFilter
+}
+
+type StaticPageNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  title: String!
+  slug: String!
+  numchild: Int!
+  urlPath: String!
+  seoTitle: String!
+  searchDescription: String!
+  published: Date!
+  body: RichTextFieldType!
+}
+
+type StaticPageNodeConnection {
+  """Pagination data for this connection"""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection"""
+  edges: [StaticPageNodeEdge!]!
+
+  """Total quantity of existing nodes."""
+  totalCount: Int
+  edgeCount: Int
+}
+
+"""An edge in a connection."""
+type StaticPageNodeEdge {
+  """A cursor for use in pagination"""
+  cursor: String!
+
+  """The item at the end of the edge"""
+  node: StaticPageNode!
+}
+
+input StrFilterLookup {
+  exact: String
+  iExact: String
+  contains: String
+  iContains: String
+  inList: [String!]
+  gt: String
+  gte: String
+  lt: String
+  lte: String
+  startsWith: String
+  iStartsWith: String
+  endsWith: String
+  iEndsWith: String
+  range: [String!]
+  isNull: Boolean
+  regex: String
+  iRegex: String
+  nExact: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIExact: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nContains: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIContains: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nInList: [String!] @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nGt: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nGte: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nLt: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nLte: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nStartsWith: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIStartsWith: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nEndsWith: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIEndsWith: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nRange: [String!] @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIsNull: Boolean @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nRegex: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+  nIRegex: String @deprecated(reason: "The \"n\" prefix is deprecated and will be removed in the future, use `NOT` instead.\n")
+}
+
+type TopicBlock {
+  topicId: Int!
+  title: String!
+  issues: [IssueBlock]
+}
+
+scalar UUID
+
+type UserGuidePageNode implements Node {
+  """The Globally Unique ID of this object"""
+  id: GlobalID!
+  title: String!
+  slug: String!
+  numchild: Int!
+  urlPath: String!
+  seoTitle: String!
+  searchDescription: String!
+  questions: [QuestionBlock!]
+}
