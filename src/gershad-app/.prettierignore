@@ -1,0 +1,15 @@
+/.idea/
+/.next/**/*
+/.next-test/**/*
+/android/.idea/
+/android/app/build/
+/android/app/src/main/assets/
+/android/app/src/main/res/
+/android/capacitor-cordova-android-plugins/
+/assets/
+/ios/
+/out/
+/out-test/
+/package-lock.json
+/src/generated/graphQl.ts
+/src/strings/strings.schema.json

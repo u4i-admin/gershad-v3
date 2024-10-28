@@ -1,0 +1,137 @@
+fragment Reporter on ReporterNode {
+  id
+}
+
+fragment ReportType on ReportTypeNode {
+  id
+  name
+  description
+}
+
+fragment Report on ReportNode {
+  id
+  address
+  description
+  verified
+  permanent
+  requested
+  client
+  token(token: $token)
+  pk
+  created
+  modified
+  location
+  type {
+    ...ReportType
+  }
+  reporter {
+    ...Reporter
+  }
+}
+
+fragment ReportGroup on ReportGroupNode {
+  lastUpdate
+  centroidLatitude
+  centroidLongitude
+  verified
+  faded
+  score
+  permanent
+  firstCreated
+  highestPk
+  reportCount
+  reports {
+    ...Report
+  }
+}
+
+query getReports(
+  $east: Decimal = null
+  $west: Decimal = null
+  $north: Decimal = null
+  $south: Decimal = null
+  $longitude: Decimal = null
+  $latitude: Decimal = null
+  $radius: Int = null
+  $token: String = null
+) {
+  reports(
+    east: $east
+    west: $west
+    south: $south
+    north: $north
+    token: $token
+    longitude: $longitude
+    latitude: $latitude
+    radius: $radius
+  ) {
+    ...ReportGroup
+  }
+}
+
+query getReportsNearPOI($after: Float!, $token: String) {
+  reportsNearPoi(after: $after, token: $token) {
+    ...ReportGroup
+  }
+}
+
+mutation doCreateReport(
+  $longitude: Decimal!
+  $latitude: Decimal!
+  $permanent: Boolean!
+  $reportType: String!
+  $address: String!
+  $token: String!
+  $client: ClientTypeEnum!
+) {
+  createReport(
+    longitude: $longitude
+    latitude: $latitude
+    permanent: $permanent
+    reportType: $reportType
+    address: $address
+    token: $token
+    client: $client
+  ) {
+    success
+    errors
+    reportGroups {
+      ...ReportGroup
+    }
+  }
+}
+mutation doUpdateReport(
+  $pk: Int!
+  $token: String!
+  $longitude: Decimal!
+  $latitude: Decimal!
+  $permanent: Boolean!
+  $verified: Boolean!
+  $reportType: String!
+  $address: String!
+  $description: String
+) {
+  updateReport(
+    address: $address
+    pk: $pk
+    token: $token
+    longitude: $longitude
+    latitude: $latitude
+    verified: $verified
+    permanent: $permanent
+    reportType: $reportType
+    description: $description
+  ) {
+    success
+    errors
+    reportGroups {
+      ...ReportGroup
+    }
+  }
+}
+mutation doDeleteReport($pk: Int!, $token: String!) {
+  deleteReport(pk: $pk, token: $token) {
+    success
+    errors
+  }
+}

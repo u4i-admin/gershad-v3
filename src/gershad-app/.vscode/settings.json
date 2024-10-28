@@ -1,0 +1,151 @@
+{
+  "cSpell.enableFiletypes": [
+    "dotenv"
+  ],
+  "cSpell.ignorePaths": [
+    "src/strings/stringsFa.json"
+  ],
+  "cSpell.spellCheckOnlyWorkspaceFiles": true,
+  "cSpell.words": [
+    "apks",
+    "appbar",
+    "ariakit",
+    "Autosize",
+    "basepath",
+    "beepass",
+    "bundletool",
+    "clickaway",
+    "clusterer",
+    "codegen",
+    "constate",
+    "contenteditable",
+    "crossorigin",
+    "deeplink",
+    "divs",
+    "envalid",
+    "esnext",
+    "etag",
+    "favicons",
+    "GASHT",
+    "geocode",
+    "geofence",
+    "geofences",
+    "geofencing",
+    "geolocation",
+    "gershad",
+    "getifaddr",
+    "googlemaps",
+    "gtag",
+    "hotzones",
+    "iframes",
+    "instgrm",
+    "keystorealias",
+    "keystorealiaspass",
+    "keystorepass",
+    "keystorepath",
+    "knip",
+    "LATLNG",
+    "markerclusterer",
+    "maxage",
+    "migratable",
+    "minmax",
+    "mizdra",
+    "msapplication",
+    "nomodule",
+    "notif",
+    "numchild",
+    "overlayscrollbars",
+    "pageview",
+    "pbxproj",
+    "Pois",
+    "prefetch",
+    "prefixer",
+    "recalcs",
+    "REPFORCE",
+    "roadmap",
+    "Roboto",
+    "rushstack",
+    "sanitizations",
+    "sdkmanager",
+    "stopcheck",
+    "striptags",
+    "stylis",
+    "Swipeable",
+    "tabindex",
+    "tappable",
+    "transistorsoft",
+    "tweenjs",
+    "Unclickable",
+    "unoptimized",
+    "usememo",
+    "webp",
+    "woff",
+    "Wordmark",
+    "xcodeproj",
+    "xcworkspace"
+  ],
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true,
+    " ": true
+  },
+  "files.associations": {
+    ".env.*": "shellscript",
+    "Dockerfile*": "dockerfile"
+  },
+  "files.exclude": {
+    ".next": true,
+    ".next-e2e": true,
+    ".swc": true,
+    ".packagehash": true,
+    "tsconfig.tsbuildinfo": true,
+    "android/app/build": true,
+    "android/app/src/main/assets/public": true,
+    "ios/App/App/public": true,
+    "ios/DerivedData": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "jest.runMode": "on-demand",
+  "jest.jestCommandLine": "npm run jest --",
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "markdown.extension.toc.levels": "2..6",
+  "material-icon-theme.files.associations": {
+    "*.jest.test.ts": "test-jsx",
+    "*.jest.test.tsx": "test-jsx",
+    "IndependentAndroidManifest.xml": "android"
+  },
+  "material-icon-theme.languages.associations": {
+    "dockerfile": "docker"
+  },
+  "prettier.configPath": "prettier.config.js",
+  "redhat.telemetry.enabled": false,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 80,
+  "search.exclude": {
+    "**/node_modules": true,
+    "/.vscode/": true,
+    "/package-lock.json": true
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[graphql][javascript][json][jsonc][markdown][typescript][typescriptreact][xml][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[yaml]": {
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

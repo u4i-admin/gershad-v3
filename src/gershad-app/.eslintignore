@@ -1,0 +1,7 @@
+!.eslintrc.js
+!gershad-env.d.ts
+/android/
+/ios/
+/out/
+/out-test/
+/src/generated/graphQl.ts

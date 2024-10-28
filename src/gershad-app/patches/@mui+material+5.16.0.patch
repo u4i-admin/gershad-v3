@@ -1,0 +1,15 @@
+diff --git a/node_modules/@mui/material/SwipeableDrawer/SwipeableDrawer.js b/node_modules/@mui/material/SwipeableDrawer/SwipeableDrawer.js
+index 89b4ecc..df0ef40 100644
+--- a/node_modules/@mui/material/SwipeableDrawer/SwipeableDrawer.js
++++ b/node_modules/@mui/material/SwipeableDrawer/SwipeableDrawer.js
+@@ -268,7 +268,9 @@ const SwipeableDrawer = /*#__PURE__*/React.forwardRef(function SwipeableDrawer(i
+       const horizontalSwipe = isHorizontal(anchor);
+       if (!open && paperRef.current) {
+         // The ref may be null when a parent component updates while swiping.
+-        setPosition(getMaxTranslate(horizontalSwipe, paperRef.current) + (disableDiscovery ? 15 : -DRAG_STARTED_SIGNAL), {
++        // ASL19 patch: Translate by 0 when disableDiscovery is true (workaround for https://github.com/mui/material-ui/issues/30762)
+++        setPosition(getMaxTranslate(horizontalSwipe, paperRef.current) + (disableDiscovery ? 0 : -DRAG_STARTED_SIGNAL), {
++
+           changeTransition: false
+         });
+       }

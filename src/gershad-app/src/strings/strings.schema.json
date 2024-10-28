@@ -1,0 +1,1399 @@
+{
+  "$ref": "#/definitions/Strings",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AboutPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "pageTitle": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageTitle"
+      ],
+      "type": "object"
+    },
+    "AddPointsOfInterestFabStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "a11yLabel": {
+          "description": "Label text for a button for accessibility purposes",
+          "type": "string"
+        }
+      },
+      "required": [
+        "a11yLabel"
+      ],
+      "type": "object"
+    },
+    "BackgroundGeolocationDisabledNoticeStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "prefix": {
+          "description": "Text before \"Settings\" in warning",
+          "type": "string"
+        },
+        "suffix": {
+          "description": "Text after \"Settings\" in warning",
+          "type": "string"
+        }
+      },
+      "required": [
+        "prefix",
+        "suffix"
+      ],
+      "type": "object"
+    },
+    "ClientSideErrorFallbackStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "title"
+      ],
+      "type": "object"
+    },
+    "DeleteAndUpdateConfirmationDialogStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "additionalProperties": false,
+          "properties": {
+            "cancel": {
+              "description": "Button text `Cancel` to cancel action",
+              "type": "string"
+            },
+            "delete": {
+              "description": "Button text `Delete` to delete report/bookmarked location",
+              "type": "string"
+            },
+            "update": {
+              "description": "Button text `Update` to update app version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cancel",
+            "delete",
+            "update"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "actions"
+      ],
+      "type": "object"
+    },
+    "ErrorMessageDialogStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "networkErrorDescription": {
+          "description": "Text for Error Dialog description when there's network error",
+          "type": "string"
+        },
+        "networkErrorHeading": {
+          "description": "Text for Error Dialog Heading when there's network error",
+          "type": "string"
+        }
+      },
+      "required": [
+        "networkErrorDescription",
+        "networkErrorHeading"
+      ],
+      "type": "object"
+    },
+    "FootnotesListStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "footnotes": {
+          "description": "Text for footnotes section heading",
+          "type": "string"
+        }
+      },
+      "required": [
+        "footnotes"
+      ],
+      "type": "object"
+    },
+    "FormSubmitButtonWithLoadingIndicatorStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "submittingA11yLabel": {
+          "description": "Label text for button `Submitting` for accessibility purposes",
+          "type": "string"
+        }
+      },
+      "required": [
+        "submittingA11yLabel"
+      ],
+      "type": "object"
+    },
+    "GoogleMapStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "locationDeniedError": {
+          "description": "Error message that appears if the user has rejected the app’s location permission then taps the location button (or rejects it after clicking the location button).",
+          "type": "string"
+        },
+        "locationDisabledError": {
+          "description": "Error message that appears if the user has disabled location services on their phone permission then taps the location button.",
+          "type": "string"
+        },
+        "noInternetConnection": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "locationDeniedError",
+        "locationDisabledError",
+        "noInternetConnection"
+      ],
+      "type": "object"
+    },
+    "GoogleMapsApiLoadingLogicStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "googleMapsApiErrorMessage": {
+          "description": "Error message to display when Google Maps fails to load.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "googleMapsApiErrorMessage"
+      ],
+      "type": "object"
+    },
+    "HomePageSearchNavStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "searchPlaceholder": {
+          "description": "Placeholder text for a search field. This prompts users input location.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "searchPlaceholder"
+      ],
+      "type": "object"
+    },
+    "HotzoneMarkerStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "totalReports": {
+          "description": "Text for Total Report",
+          "type": "string"
+        }
+      },
+      "required": [
+        "totalReports"
+      ],
+      "type": "object"
+    },
+    "KnowYourRightsPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "pageTitle": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageTitle"
+      ],
+      "type": "object"
+    },
+    "KnowYourRightsSearchPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "noResultsFound": {
+          "description": "Text for No Results Found",
+          "type": "string"
+        },
+        "pageTitle": {
+          "description": "Page SEO title.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "noResultsFound",
+        "pageTitle"
+      ],
+      "type": "object"
+    },
+    "MenuDrawerStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "primaryList": {
+          "additionalProperties": false,
+          "description": "Menu primary list texts",
+          "properties": {
+            "map": {
+              "description": "Text for a link that navigates users to the main page",
+              "type": "string"
+            },
+            "pointsOfInterest": {
+              "description": "Text for a link that navigates users to the \"Bookmarked Location\" page",
+              "type": "string"
+            },
+            "reports": {
+              "description": "Text for a link that navigates users to \"Reports\" page",
+              "type": "string"
+            }
+          },
+          "required": [
+            "map",
+            "pointsOfInterest",
+            "reports"
+          ],
+          "type": "object"
+        },
+        "secondaryList": {
+          "additionalProperties": false,
+          "description": "Menu secondary list texts",
+          "properties": {
+            "about": {
+              "description": "Text for a link that navigates users to \"About\" page",
+              "type": "string"
+            },
+            "faqs": {
+              "description": "Text for a link that navigates users to FAQs(Frequently Asked Questions) page",
+              "type": "string"
+            },
+            "sendFeedback": {
+              "description": "Text for a link, it opens the user's default email with pre-filled in the \"To\" field to a specific email address",
+              "type": "string"
+            },
+            "settings": {
+              "description": "Text for a link that navigates users to \"Settings\" page",
+              "type": "string"
+            },
+            "uninstallApp": {
+              "description": "Button text to prompt app deletion confirmation via a native plugin.",
+              "type": "string"
+            },
+            "updateAppVersion": {
+              "description": "Button text to prompt app update confirmation.",
+              "type": "string"
+            },
+            "userGuide": {
+              "description": "Text for a link that navigates users to \"User guide\" page",
+              "type": "string"
+            }
+          },
+          "required": [
+            "about",
+            "faqs",
+            "sendFeedback",
+            "settings",
+            "uninstallApp",
+            "updateAppVersion",
+            "userGuide"
+          ],
+          "type": "object"
+        },
+        "updateConfirmationText": {
+          "description": "Text for updating app version confirmation",
+          "type": "string"
+        },
+        "version": {
+          "description": "Text version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "primaryList",
+        "secondaryList",
+        "updateConfirmationText",
+        "version"
+      ],
+      "type": "object"
+    },
+    "NotificationsPermissionSettingsListStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundLocationSharingSection": {
+          "additionalProperties": false,
+          "description": "\"Background location sharing\" section.",
+          "properties": {
+            "disabledNotice": {
+              "description": "Notice that’s displayed if the user has granted the permissions required to enable background location sharing, but hasn’t enabled background location sharing.",
+              "type": "string"
+            },
+            "heading": {
+              "description": "Heading of section.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "disabledNotice",
+            "heading"
+          ],
+          "type": "object"
+        },
+        "notificationsSection": {
+          "additionalProperties": false,
+          "description": "\"Notifications\" section",
+          "properties": {
+            "heading": {
+              "description": "Text for Notifications Setting Section Heading",
+              "type": "string"
+            },
+            "labels": {
+              "additionalProperties": false,
+              "properties": {
+                "enteringHotZone": {
+                  "description": "Text For Hot Zone Entering switch label",
+                  "type": "string"
+                },
+                "newReportCloseToYou": {
+                  "description": "Text for new report close to user location switch label",
+                  "type": "string"
+                },
+                "newReportCloseToYourBookmarkedLocation": {
+                  "description": "Text for new report close to bookmarked location switch label",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "enteringHotZone",
+                "newReportCloseToYou",
+                "newReportCloseToYourBookmarkedLocation"
+              ],
+              "type": "object"
+            },
+            "toasts": {
+              "additionalProperties": false,
+              "description": "Toasts (notifications that appear at the bottom of the screen).",
+              "properties": {
+                "mustEnableNotificationsPermission": {
+                  "description": "Toast that appears if the user tries to enable a notification but denies the notifications permission when prompted.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mustEnableNotificationsPermission"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "heading",
+            "labels",
+            "toasts"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "backgroundLocationSharingSection",
+        "notificationsSection"
+      ],
+      "type": "object"
+    },
+    "NotificationsPrerequisitesNoticeFunctionalityExplanationStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "disabledBody": {
+          "type": "string"
+        },
+        "disabledHeading": {
+          "type": "string"
+        },
+        "enabledBody": {
+          "type": "string"
+        },
+        "enabledHeading": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "disabledBody",
+        "disabledHeading",
+        "enabledBody",
+        "enabledHeading"
+      ],
+      "type": "object"
+    },
+    "NotificationsPrerequisitesNoticeListItemStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "disabledA11yLabel": {
+          "type": "string"
+        },
+        "enabledAllyLabel": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "disabledA11yLabel",
+        "enabledAllyLabel"
+      ],
+      "type": "object"
+    },
+    "NotificationsPrerequisitesNoticeStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "android": {
+          "additionalProperties": false,
+          "properties": {
+            "locationAlwaysPermissionLabel": {
+              "description": "Label indicating where in the Android Settings app’s app permissions section the user can find the \"Location\" permission, and what it should be set to.",
+              "type": "string"
+            },
+            "notificationsPermissionLabel": {
+              "description": "Label indicating where in the Android Settings app’s app permissions section the user can find the \"Notifications\" permission, and what it should be set to.",
+              "type": "string"
+            },
+            "physicalActivityPermissionLabel": {
+              "description": "Label indicating where in the Android Settings app’s app permissions section the user can find the \"Physical activity\" permission, and what it should be set to.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "locationAlwaysPermissionLabel",
+            "notificationsPermissionLabel",
+            "physicalActivityPermissionLabel"
+          ],
+          "type": "object"
+        },
+        "ios": {
+          "additionalProperties": false,
+          "properties": {
+            "locationAlwaysPermissionLabel": {
+              "description": "Label indicating where in the iOS Settings app’s app permissions section the user can find the \"Location\" permission, and what it should be set to.",
+              "type": "string"
+            },
+            "motionAndFitnessPermissionLabel": {
+              "description": "Label indicating where in the iOS Settings app’s app permissions section the user can find the \"Motion & Fitness\" permission, and what it should be set to.",
+              "type": "string"
+            },
+            "notificationsPermissionLabel": {
+              "description": "Label indicating where in the iOS Settings app’s app permissions section the user can find the \"Notifications\" permission, and what it should be set to.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "locationAlwaysPermissionLabel",
+            "motionAndFitnessPermissionLabel",
+            "notificationsPermissionLabel"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "android",
+        "ios"
+      ],
+      "type": "object"
+    },
+    "OnboardingCarouselStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "buttons": {
+          "additionalProperties": false,
+          "properties": {
+            "next": {
+              "description": "Text for next button",
+              "type": "string"
+            },
+            "prev": {
+              "description": "Text for previous button",
+              "type": "string"
+            },
+            "start": {
+              "description": "Text for start button",
+              "type": "string"
+            }
+          },
+          "required": [
+            "next",
+            "prev",
+            "start"
+          ],
+          "type": "object"
+        },
+        "slide1": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "description",
+            "title"
+          ],
+          "type": "object"
+        },
+        "slide2": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "description",
+            "title"
+          ],
+          "type": "object"
+        },
+        "slide3": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "description",
+            "title"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "buttons",
+        "slide1",
+        "slide2",
+        "slide3"
+      ],
+      "type": "object"
+    },
+    "P2PSettingSectionStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "p2p": {
+          "description": "Text for P2P setting",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p2p"
+      ],
+      "type": "object"
+    },
+    "PageMetaStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "pageTitleAndSiteTitle": {
+          "description": "Page title + site title (e.g. \"Settings — Gershad\").\n\nUsed if the page has a title.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageTitleAndSiteTitle"
+      ],
+      "type": "object"
+    },
+    "PointOfInterestListItemStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "confirmDescription": {
+          "description": "Text for confirmation dialog description",
+          "type": "string"
+        },
+        "toasts": {
+          "additionalProperties": false,
+          "description": "In-app notification messages (\"toasts\").",
+          "properties": {
+            "deleteSuccess": {
+              "description": "Text indicating to the user that the selected point of interest was deleted.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "deleteSuccess"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "confirmDescription",
+        "toasts"
+      ],
+      "type": "object"
+    },
+    "PointsOfInterestPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "noBookmarkedDescription": {
+          "description": "Text appears when there's no bookmarked locations",
+          "type": "string"
+        },
+        "pageTitle": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "noBookmarkedDescription",
+        "pageTitle"
+      ],
+      "type": "object"
+    },
+    "ReportActionDeleteButtonStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "confirmDescription": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "confirmDescription"
+      ],
+      "type": "object"
+    },
+    "ReportDescriptionOverlayStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "placeHolder": {
+          "description": "Text for add description place holder",
+          "type": "string"
+        }
+      },
+      "required": [
+        "placeHolder"
+      ],
+      "type": "object"
+    },
+    "ReportErrorMessageDialogStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "buttonText": {
+          "description": "button Text",
+          "type": "string"
+        },
+        "heading": {
+          "description": "Text for Error Dialog Heading",
+          "type": "string"
+        },
+        "invalid": {
+          "description": "Text for invalid",
+          "type": "string"
+        },
+        "noInternetConnection": {
+          "description": "Text for no internet connection error",
+          "type": "string"
+        },
+        "unexpected": {
+          "description": "Text for unexpected",
+          "type": "string"
+        }
+      },
+      "required": [
+        "buttonText",
+        "heading",
+        "invalid",
+        "noInternetConnection",
+        "unexpected"
+      ],
+      "type": "object"
+    },
+    "ReportOverlayReportLocationButtonStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "buttonText": {
+          "description": "Text of \"Report location\" button.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "buttonText"
+      ],
+      "type": "object"
+    },
+    "ReportTypeSelectionStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "header": {
+          "description": "Text for Report Type Selection header",
+          "type": "string"
+        }
+      },
+      "required": [
+        "header"
+      ],
+      "type": "object"
+    },
+    "ReportsPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "description": "Page SEO description.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "title"
+      ],
+      "type": "object"
+    },
+    "SearchBoxStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "placeholder": {
+          "description": "Text for search box place holder",
+          "type": "string"
+        }
+      },
+      "required": [
+        "placeholder"
+      ],
+      "type": "object"
+    },
+    "SettingsPageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "placeholderText": {
+          "type": "string"
+        },
+        "title": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "placeholderText",
+        "title"
+      ],
+      "type": "object"
+    },
+    "SharedStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundGeoLocation": {
+          "additionalProperties": false,
+          "description": "Text for code that manages tracking the user’s location in the background.",
+          "properties": {
+            "backgroundPermissionRationale": {
+              "additionalProperties": false,
+              "description": "Explanations for requested permissions (displayed in permission dialogs).\n\nNOTE: If the app is functioning correctly these should never appear since we check to see if the user has granted this permission before calling the method that triggers this popup, but we need to provide this in case there’s a bug that allows it to appear.",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "negativeAction": {
+                  "type": "string"
+                },
+                "positiveAction": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "negativeAction",
+                "positiveAction",
+                "title"
+              ],
+              "type": "object"
+            },
+            "notification": {
+              "additionalProperties": false,
+              "description": "Text for persistent Android notification indicating to the user that background tracking is active.",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "text",
+                "title"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "backgroundPermissionRationale",
+            "notification"
+          ],
+          "type": "object"
+        },
+        "beepassDescription": {
+          "description": "Text for beepass Logo description",
+          "type": "string"
+        },
+        "button": {
+          "additionalProperties": false,
+          "description": "Share Button Text",
+          "properties": {
+            "all": {
+              "type": "string"
+            },
+            "bookmark": {
+              "type": "string"
+            },
+            "bookmarkThisLocation": {
+              "type": "string"
+            },
+            "bookmarked": {
+              "type": "string"
+            },
+            "confirm": {
+              "type": "string"
+            },
+            "delete": {
+              "type": "string"
+            },
+            "edit": {
+              "type": "string"
+            },
+            "goBack": {
+              "type": "string"
+            },
+            "iUnderstand": {
+              "type": "string"
+            },
+            "no": {
+              "type": "string"
+            },
+            "save": {
+              "type": "string"
+            },
+            "share": {
+              "type": "string"
+            },
+            "submit": {
+              "type": "string"
+            },
+            "yes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "all",
+            "bookmark",
+            "bookmarkThisLocation",
+            "bookmarked",
+            "confirm",
+            "delete",
+            "edit",
+            "goBack",
+            "iUnderstand",
+            "no",
+            "save",
+            "share",
+            "submit",
+            "yes"
+          ],
+          "type": "object"
+        },
+        "notifications": {
+          "additionalProperties": false,
+          "description": "Notifications",
+          "properties": {
+            "hotZoneEntered": {
+              "additionalProperties": false,
+              "description": "Notification that appears when the user’s device enters a hot zone.",
+              "properties": {
+                "description": {
+                  "description": "Notification body text.",
+                  "type": "string"
+                },
+                "title": {
+                  "description": "Notification title.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description",
+                "title"
+              ],
+              "type": "object"
+            },
+            "newReportsNearDevice": {
+              "additionalProperties": false,
+              "description": "Notification that appears when there’s one or more new reports near the user’s device.",
+              "properties": {
+                "description": {
+                  "description": "Notification body text.",
+                  "type": "string"
+                },
+                "title": {
+                  "description": "Notification title.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description",
+                "title"
+              ],
+              "type": "object"
+            },
+            "newReportsNearPoi": {
+              "additionalProperties": false,
+              "description": "Notification that appears when there’s one or more new reports near a location the user has bookmarked (a.k.a. a \"point of interest\")",
+              "properties": {
+                "description": {
+                  "description": "Notification body text.",
+                  "type": "string"
+                },
+                "title": {
+                  "description": "Notification title.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description",
+                "title"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "hotZoneEntered",
+            "newReportsNearDevice",
+            "newReportsNearPoi"
+          ],
+          "type": "object"
+        },
+        "reportTypes": {
+          "additionalProperties": false,
+          "description": "Report Types",
+          "properties": {
+            "all": {
+              "description": "The text 'All' used in report filtering options. It indicates that it will display all available report types",
+              "type": "string"
+            },
+            "permanent": {
+              "description": "Text `Permanent` specifies the report types",
+              "type": "string"
+            },
+            "police": {
+              "description": "Text `Police` specifies the report types",
+              "type": "string"
+            },
+            "repForce": {
+              "description": "Text \"Repressive force\" (\"Anti-protest\") specifies the report types",
+              "type": "string"
+            },
+            "stopCheck": {
+              "description": "Text `Stop Check` specifies the report types",
+              "type": "string"
+            },
+            "van": {
+              "description": "Text `Van` specifies the report types",
+              "type": "string"
+            }
+          },
+          "required": [
+            "all",
+            "permanent",
+            "police",
+            "repForce",
+            "stopCheck",
+            "van"
+          ],
+          "type": "object"
+        },
+        "siteTitle": {
+          "description": "Site title (reused where appropriate)",
+          "type": "string"
+        },
+        "switchLabel": {
+          "additionalProperties": false,
+          "description": "Text for switch state label",
+          "properties": {
+            "off": {
+              "type": "string"
+            },
+            "on": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "off",
+            "on"
+          ],
+          "type": "object"
+        },
+        "toasts": {
+          "additionalProperties": false,
+          "description": "Text for various toasts (success/warning/error messages that pop up at the bottom of the screen).",
+          "properties": {
+            "bookmarkAddFailed": {
+              "type": "string"
+            },
+            "bookmarkAddPreventedDuplicate": {
+              "type": "string"
+            },
+            "bookmarkAddSucceeded": {
+              "type": "string"
+            },
+            "bookmarkDeleteFailed": {
+              "type": "string"
+            },
+            "bookmarkDeleteSucceeded": {
+              "type": "string"
+            },
+            "commentEditFailed": {
+              "type": "string"
+            },
+            "commentEditSucceeded": {
+              "type": "string"
+            },
+            "dataLoadFailed": {
+              "description": "Used in cases where the app fails to load data (reports, user reports, hotzones, pages, etc.)",
+              "type": "string"
+            },
+            "reportAddFailed": {
+              "type": "string"
+            },
+            "reportAddRejectedTooManyReports": {
+              "description": "Message that appears if the server rejects a new report (or report confirmation) because the user has created a report in the past 30 minutes.",
+              "type": "string"
+            },
+            "reportAddSucceeded": {
+              "type": "string"
+            },
+            "reportDeleteFailed": {
+              "type": "string"
+            },
+            "reportDeleteSucceeded": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "bookmarkAddFailed",
+            "bookmarkAddPreventedDuplicate",
+            "bookmarkAddSucceeded",
+            "bookmarkDeleteFailed",
+            "bookmarkDeleteSucceeded",
+            "commentEditFailed",
+            "commentEditSucceeded",
+            "dataLoadFailed",
+            "reportAddFailed",
+            "reportAddRejectedTooManyReports",
+            "reportAddSucceeded",
+            "reportDeleteFailed",
+            "reportDeleteSucceeded"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "backgroundGeoLocation",
+        "beepassDescription",
+        "button",
+        "notifications",
+        "reportTypes",
+        "siteTitle",
+        "switchLabel",
+        "toasts"
+      ],
+      "type": "object"
+    },
+    "Strings": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "AboutPage": {
+          "$ref": "#/definitions/AboutPageStrings",
+          "description": "About page ."
+        },
+        "AddPointsOfInterestFab": {
+          "$ref": "#/definitions/AddPointsOfInterestFabStrings",
+          "description": "PointsOfInterest locations page (+) button."
+        },
+        "BackgroundGeolocationDisabledNotice": {
+          "$ref": "#/definitions/BackgroundGeolocationDisabledNoticeStrings",
+          "description": "Notice to display if background geolocation is disabled (so notifications can’t be sent).\n\nDisplayed in bookmarked locations page if background geolocation is disabled."
+        },
+        "ClientSideErrorFallback": {
+          "$ref": "#/definitions/ClientSideErrorFallbackStrings",
+          "description": "Error displayed if the site fails in the browser (e.g. because the user is using a very old browser, or there’s a frontend bug)."
+        },
+        "DeleteAndUpdateConfirmationDialog": {
+          "$ref": "#/definitions/DeleteAndUpdateConfirmationDialogStrings",
+          "description": "Confirmation dialog for deleting items (bookmarks, reports, etc.) and updating app version."
+        },
+        "ErrorMessageDialog": {
+          "$ref": "#/definitions/ErrorMessageDialogStrings",
+          "description": "ErrorMessageDialog"
+        },
+        "FootnotesList": {
+          "$ref": "#/definitions/FootnotesListStrings",
+          "description": "KnowYourRightsChildPageContent - FootnotesList"
+        },
+        "FormSubmitButtonWithLoadingIndicator": {
+          "$ref": "#/definitions/FormSubmitButtonWithLoadingIndicatorStrings",
+          "description": "For submit button that displays a loading indicator while the form is submitting."
+        },
+        "GoogleMap": {
+          "$ref": "#/definitions/GoogleMapStrings",
+          "description": "Google Map main logic."
+        },
+        "GoogleMapsApiLoadingLogic": {
+          "$ref": "#/definitions/GoogleMapsApiLoadingLogicStrings",
+          "description": "Internal loading/error handling logic for Google Maps API."
+        },
+        "HomePageSearchNav": {
+          "$ref": "#/definitions/HomePageSearchNavStrings",
+          "description": "Home page fixed search/nav box."
+        },
+        "HotzoneMarker": {
+          "$ref": "#/definitions/HotzoneMarkerStrings",
+          "description": "HomePage - Hotzone Marker"
+        },
+        "KnowYourRightsPage": {
+          "$ref": "#/definitions/KnowYourRightsPageStrings",
+          "description": "Know Your Rights Page"
+        },
+        "KnowYourRightsSearchPage": {
+          "$ref": "#/definitions/KnowYourRightsSearchPageStrings",
+          "description": "Know Your RightsSearchPage"
+        },
+        "MenuDrawer": {
+          "$ref": "#/definitions/MenuDrawerStrings",
+          "description": "Navigation menu drawer."
+        },
+        "NotificationsPermissionSettingsList": {
+          "$ref": "#/definitions/NotificationsPermissionSettingsListStrings",
+          "description": "SettingsPage - NotificationsSettingsList"
+        },
+        "NotificationsPrerequisitesNotice": {
+          "$ref": "#/definitions/NotificationsPrerequisitesNoticeStrings",
+          "description": "Note that’s displayed if user needs to enable permissions before they can enable notifications."
+        },
+        "NotificationsPrerequisitesNoticeFunctionalityExplanation": {
+          "$ref": "#/definitions/NotificationsPrerequisitesNoticeFunctionalityExplanationStrings",
+          "description": "Explanation of the background location sharing feature. Displayed in the settings page when the user has granted the required permissions."
+        },
+        "NotificationsPrerequisitesNoticeListItem": {
+          "$ref": "#/definitions/NotificationsPrerequisitesNoticeListItemStrings",
+          "description": "Item in list of permissions required to enable notifications."
+        },
+        "OnBoardingCarousel": {
+          "$ref": "#/definitions/OnboardingCarouselStrings",
+          "description": "HomePage - OnBoarding Carousel"
+        },
+        "P2PSettingSection": {
+          "$ref": "#/definitions/P2PSettingSectionStrings",
+          "description": "Settings Page - P2P"
+        },
+        "PageMeta": {
+          "$ref": "#/definitions/PageMetaStrings",
+          "description": "Page metadata (including SEO and social media tags)."
+        },
+        "PointOfInterestListItem": {
+          "$ref": "#/definitions/PointOfInterestListItemStrings",
+          "description": "PointOfInterest"
+        },
+        "PointsOfInterestPage": {
+          "$ref": "#/definitions/PointsOfInterestPageStrings",
+          "description": "PointOfInterest Page"
+        },
+        "ReportActionDeleteButton": {
+          "$ref": "#/definitions/ReportActionDeleteButtonStrings",
+          "description": "Delete report confirmation button and overlay."
+        },
+        "ReportDescriptionOverlay": {
+          "$ref": "#/definitions/ReportDescriptionOverlayStrings",
+          "description": "Report Info - Report Description Overlay"
+        },
+        "ReportErrorMessageDialog": {
+          "$ref": "#/definitions/ReportErrorMessageDialogStrings",
+          "description": "ReportErrorMessageDialog"
+        },
+        "ReportOverlayReportLocationButton": {
+          "$ref": "#/definitions/ReportOverlayReportLocationButtonStrings",
+          "description": "\"Report location\" button."
+        },
+        "ReportTypeSelection": {
+          "$ref": "#/definitions/ReportTypeSelectionStrings",
+          "description": "Report Overlay - Report Type Selection"
+        },
+        "ReportsPage": {
+          "$ref": "#/definitions/ReportsPageStrings",
+          "description": "ReportsPage"
+        },
+        "SearchBox": {
+          "$ref": "#/definitions/SearchBoxStrings",
+          "description": "Know Your SearchBox"
+        },
+        "SettingsPage": {
+          "$ref": "#/definitions/SettingsPageStrings",
+          "description": "Settings page (/fa/settings)."
+        },
+        "UninstallApplicationSection": {
+          "$ref": "#/definitions/UninstallApplicationSectionStrings",
+          "description": "Settings page - UninstallApplicationSection."
+        },
+        "UserGuidePage": {
+          "$ref": "#/definitions/UserGuidePageStrings",
+          "description": "UserGuide page (/fa/user-guide)."
+        },
+        "UserReportCommentsForm": {
+          "$ref": "#/definitions/UserReportCommentsFormStrings",
+          "description": "User report edit/submit comment form (full-screen, slides up from bottom)."
+        },
+        "UserReportGroupMembers": {
+          "$ref": "#/definitions/UserReportGroupMembersStrings",
+          "description": "UserReportGroupMembers"
+        },
+        "UserReportGroupMinimal": {
+          "$ref": "#/definitions/UserReportGroupMinimalStrings",
+          "description": "Report Overlay - UserReportGroupMinimalS"
+        },
+        "shared": {
+          "$ref": "#/definitions/SharedStrings",
+          "description": "Shared strings."
+        }
+      },
+      "required": [
+        "$schema",
+        "AboutPage",
+        "AddPointsOfInterestFab",
+        "BackgroundGeolocationDisabledNotice",
+        "ClientSideErrorFallback",
+        "DeleteAndUpdateConfirmationDialog",
+        "ErrorMessageDialog",
+        "FootnotesList",
+        "FormSubmitButtonWithLoadingIndicator",
+        "GoogleMap",
+        "GoogleMapsApiLoadingLogic",
+        "HomePageSearchNav",
+        "HotzoneMarker",
+        "KnowYourRightsPage",
+        "KnowYourRightsSearchPage",
+        "MenuDrawer",
+        "NotificationsPermissionSettingsList",
+        "NotificationsPrerequisitesNotice",
+        "NotificationsPrerequisitesNoticeFunctionalityExplanation",
+        "NotificationsPrerequisitesNoticeListItem",
+        "OnBoardingCarousel",
+        "P2PSettingSection",
+        "PageMeta",
+        "PointOfInterestListItem",
+        "PointsOfInterestPage",
+        "ReportActionDeleteButton",
+        "ReportDescriptionOverlay",
+        "ReportErrorMessageDialog",
+        "ReportOverlayReportLocationButton",
+        "ReportTypeSelection",
+        "ReportsPage",
+        "SearchBox",
+        "SettingsPage",
+        "UninstallApplicationSection",
+        "UserGuidePage",
+        "UserReportCommentsForm",
+        "UserReportGroupMembers",
+        "UserReportGroupMinimal",
+        "shared"
+      ],
+      "type": "object"
+    },
+    "UninstallApplicationSectionStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "description": "Text for UninstallApplication Setting Section Heading",
+          "type": "string"
+        },
+        "uninstallApplicationFromMenu": {
+          "description": "Text for uninstall application switch label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "heading",
+        "uninstallApplicationFromMenu"
+      ],
+      "type": "object"
+    },
+    "UserGuidePageStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "pageTitle": {
+          "description": "Page title. Used in header and SEO tags.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pageTitle"
+      ],
+      "type": "object"
+    },
+    "UserReportCommentsFormStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "commentTextAreaPlaceholder": {
+          "description": "Placeholder text for a textarea. This prompts users input their comments: `Add comment`",
+          "type": "string"
+        }
+      },
+      "required": [
+        "commentTextAreaPlaceholder"
+      ],
+      "type": "object"
+    },
+    "UserReportGroupMembersStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "description": "Text for userReportGroupMembers Overlay details description header",
+          "type": "string"
+        },
+        "heading": {
+          "description": "Text for userReportGroupMembers overlay header",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "heading"
+      ],
+      "type": "object"
+    },
+    "UserReportGroupMinimalStrings": {
+      "additionalProperties": false,
+      "properties": {
+        "numberOfReportsSuffix": {
+          "description": "Text for number of reports suffix \"times\"",
+          "type": "string"
+        },
+        "reportDistanceSuffix": {
+          "description": "Text for report distance suffix \"away\"",
+          "type": "string"
+        }
+      },
+      "required": [
+        "numberOfReportsSuffix",
+        "reportDistanceSuffix"
+      ],
+      "type": "object"
+    }
+  }
+}

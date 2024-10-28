@@ -1,0 +1,26 @@
+fragment ReportsTypeCount on ReportsTypeCount {
+  reportType
+  reportsCount
+}
+
+fragment HotZoneCluster on HotZoneClustertNode {
+  id
+  pk
+  centroidLocation
+  hotzoneLevel
+  countPerType {
+    ...ReportsTypeCount
+  }
+  totalReportsCount
+}
+
+query getHotZones($after: String) {
+  hotzones(after: $after) {
+    totalCount
+    edges {
+      node {
+        ...HotZoneCluster
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+fragment UserGuideQuestionIconImageRendition on ImageRendition {
+  id
+  url
+  width
+  height
+}
+
+fragment UserGuideIconImage on ImageNode {
+  id
+  width
+  height
+  title
+  rendition(width: 64) {
+    ...UserGuideQuestionIconImageRendition
+  }
+}
+
+fragment UserGuideIconImageBlock on ImageBlock {
+  id
+  image {
+    ...UserGuideIconImage
+  }
+}
+
+fragment UserGuideQuestionBlock on QuestionBlock {
+  question
+  answer
+  icon {
+    ...UserGuideIconImageBlock
+  }
+}
+
+fragment UserGuidePage on UserGuidePageNode {
+  id
+  title
+  slug
+  numchild
+  urlPath
+  seoTitle
+  searchDescription
+  questions {
+    ...UserGuideQuestionBlock
+  }
+}
+
+query getUserGuidePage {
+  userGuidePage {
+    ...UserGuidePage
+  }
+}

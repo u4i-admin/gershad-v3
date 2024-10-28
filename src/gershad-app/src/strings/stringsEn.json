@@ -1,0 +1,268 @@
+{
+  "$schema": "./strings.schema.json",
+  "AboutPage": {
+    "pageTitle": "About Page"
+  },
+  "AddPointsOfInterestFab": {
+    "a11yLabel": "Add bookmarked location"
+  },
+  "BackgroundGeolocationDisabledNotice": {
+    "prefix": "Cannot receive notification since you did not allow it. Go to",
+    "suffix": "to accept the notification."
+  },
+  "ClientSideErrorFallback": {
+    "description": "Try restarting the app. If the problem continues please contact us and include the below error message:",
+    "title": "Unexpected error"
+  },
+  "DeleteAndUpdateConfirmationDialog": {
+    "actions": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "update": "Update"
+    }
+  },
+  "ErrorMessageDialog": {
+    "networkErrorDescription": "Please check your network connection and try again",
+    "networkErrorHeading": "Loading Error"
+  },
+  "FootnotesList": {
+    "footnotes": "Footnotes"
+  },
+  "FormSubmitButtonWithLoadingIndicator": {
+    "submittingA11yLabel": "Submitting"
+  },
+  "GoogleMap": {
+    "locationDeniedError": "Location permission denied. Please allow Gershad to access location in the Settings app.",
+    "locationDisabledError": "Location services are disabled. Please turn on location services in the Settings app.",
+    "noInternetConnection": "No internet connection"
+  },
+  "GoogleMapsApiLoadingLogic": {
+    "googleMapsApiErrorMessage": "Failed to load Google Maps. Please check your internet connection."
+  },
+  "HomePageSearchNav": {
+    "searchPlaceholder": "Search for a location"
+  },
+  "HotzoneMarker": {
+    "totalReports": "Total Reports:"
+  },
+  "KnowYourRightsPage": {
+    "pageTitle": "Know Your Rights"
+  },
+  "KnowYourRightsSearchPage": {
+    "noResultsFound": "No Results Found",
+    "pageTitle": "KnowYourRightsPage - Search"
+  },
+  "MenuDrawer": {
+    "primaryList": {
+      "map": "Map",
+      "pointsOfInterest": "Bookmarked Locations",
+      "reports": "Reports"
+    },
+    "secondaryList": {
+      "about": "About",
+      "faqs": "FAQs",
+      "sendFeedback": "Send Feedback",
+      "settings": "Settings",
+      "uninstallApp": "Uninstall App",
+      "updateAppVersion": "Update App Version",
+      "userGuide": "User Guide"
+    },
+    "updateConfirmationText": "Do you want to update your app to the latest version?",
+    "version": "Gershad version"
+  },
+  "NotificationsPrerequisitesNotice": {
+    "android": {
+      "locationAlwaysPermissionLabel": "Location: Allow all the time",
+      "notificationsPermissionLabel": "Notifications: All Gershad notifications",
+      "physicalActivityPermissionLabel": "Physical activity: Allow"
+    },
+    "ios": {
+      "locationAlwaysPermissionLabel": "Location: Always",
+      "motionAndFitnessPermissionLabel": "Motion & Fitness: Allowed",
+      "notificationsPermissionLabel": "Notifications: Allow Notifications"
+    }
+  },
+  "NotificationsPrerequisitesNoticeFunctionalityExplanation": {
+    "disabledBody": "Gershad will automatically track your location in the background (even when you’re not using the app) so it can notify you about reports and hot zones.",
+    "disabledHeading": "What happens if I enable background location sharing?",
+    "enabledBody": "Gershad is tracking your location in the background so it can notify you about reports and hot zones.",
+    "enabledHeading": "Background location sharing active"
+  },
+  "NotificationsPrerequisitesNoticeListItem": {
+    "disabledA11yLabel": "Disabled",
+    "enabledAllyLabel": "Enabled"
+  },
+  "NotificationsPermissionSettingsList": {
+    "backgroundLocationSharingSection": {
+      "disabledNotice": "You must enable background location sharing to enable notifications",
+      "heading": "Background location sharing"
+    },
+    "notificationsSection": {
+      "heading": "Notifications",
+      "labels": {
+        "enteringHotZone": "Entering hot zone",
+        "newReportCloseToYou": "New report close to you",
+        "newReportCloseToYourBookmarkedLocation": "New report close to your bookmarked location"
+      },
+      "toasts": {
+        "mustEnableNotificationsPermission": "You must change the app’s \"Location\" permission to \"Allow all the time\" to enable this notification"
+      }
+    }
+  },
+  "OnBoardingCarousel": {
+    "buttons": {
+      "next": "Next",
+      "prev": "Previous",
+      "start": "Start"
+    },
+    "slide1": {
+      "description": "گرشاد راه‌حلی است برای تردد در شهر، بدون روبرو شدن با گشت ارشاد",
+      "title": "گرشاد"
+    },
+    "slide2": {
+      "description": "گزارش گشت لباس شخصی، گشت ون و یا نیروی سرکوب با گرشاد",
+      "title": "گزارش با گرشاد"
+    },
+    "slide3": {
+      "description": "اطلاعات بیشتر درباره هر گشت را به گزارش خود اضافه کنید",
+      "title": "توضیح گزارش"
+    }
+  },
+  "P2PSettingSection": {
+    "p2p": "P2P"
+  },
+  "PageMeta": {
+    "pageTitleAndSiteTitle": "{pageTitle} — {siteTitle}"
+  },
+  "PointOfInterestListItem": {
+    "confirmDescription": "Do you want to delete this bookmarked location?",
+    "toasts": {
+      "deleteSuccess": "Bookmarked location deleted"
+    }
+  },
+  "PointsOfInterestPage": {
+    "noBookmarkedDescription": "There is no bookmarked location!",
+    "pageTitle": "Bookmarked Locations"
+  },
+  "ReportActionDeleteButton": {
+    "confirmDescription": "Do you want to delete this report?"
+  },
+  "ReportDescriptionOverlay": {
+    "placeHolder": "Add description"
+  },
+  "ReportErrorMessageDialog": {
+    "buttonText": "I understand",
+    "heading": "Please wait and try again",
+    "invalid": "Invalid",
+    "noInternetConnection": "No Internet Connection, please try again later!",
+    "unexpected": "Unexpected error, please try again later"
+  },
+  "ReportOverlayReportLocationButton": {
+    "buttonText": "Report this location"
+  },
+  "ReportTypeSelection": {
+    "header": "Choose report type"
+  },
+  "ReportsPage": {
+    "description": "Reports Page",
+    "title": "Reports Page"
+  },
+  "SearchBox": {
+    "placeholder": "Search here..."
+  },
+  "SettingsPage": {
+    "placeholderText": "Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers.",
+    "title": "Settings"
+  },
+  "UninstallApplicationSection": {
+    "heading": "Uninstall Application",
+    "uninstallApplicationFromMenu": "Uninstall application from menu"
+  },
+  "UserGuidePage": {
+    "pageTitle": "User guide"
+  },
+  "UserReportCommentsForm": {
+    "commentTextAreaPlaceholder": "Add comment"
+  },
+  "UserReportGroupMembers": {
+    "description": "description",
+    "heading": "All reports"
+  },
+  "UserReportGroupMinimal": {
+    "numberOfReportsSuffix": "times",
+    "reportDistanceSuffix": "away"
+  },
+  "shared": {
+    "backgroundGeoLocation": {
+      "backgroundPermissionRationale": {
+        "message": "Gershad requires background location permissions so it can send you notifications based on your notification settings.",
+        "negativeAction": "Leave disabled",
+        "positiveAction": "Enable in Android settings",
+        "title": "Background location"
+      },
+      "notification": {
+        "text": "Gershad is watching your location in the background so it can send you notifications based on your notification settings.",
+        "title": "Gershad active"
+      }
+    },
+    "beepassDescription": "powered by BeePassVPN",
+    "button": {
+      "all": "All",
+      "bookmark": "Bookmark",
+      "bookmarkThisLocation": "Bookmark this location",
+      "bookmarked": "Bookmarked",
+      "confirm": "Confirm",
+      "delete": "Delete",
+      "edit": "Edit",
+      "goBack": "Go Back",
+      "iUnderstand": "I understand",
+      "no": "No",
+      "save": "Save",
+      "share": "Share",
+      "submit": "Submit",
+      "yes": "Yes"
+    },
+    "notifications": {
+      "hotZoneEntered": {
+        "description": "Be careful! You're entering a high-risk area.",
+        "title": "Hotzone Alert!"
+      },
+      "newReportsNearDevice": {
+        "description": "Stay alert! New report near you.",
+        "title": "New Reports Nearby"
+      },
+      "newReportsNearPoi": {
+        "description": "There's a new report at one of your bookmarked spots.",
+        "title": "New Report in Bookmarked Spot"
+      }
+    },
+    "reportTypes": {
+      "all": "All",
+      "permanent": "Permanent",
+      "police": "Police",
+      "repForce": "Riot Force",
+      "stopCheck": "Stop Check",
+      "van": "Van"
+    },
+    "siteTitle": "Gershad",
+    "switchLabel": {
+      "off": "Off",
+      "on": "On"
+    },
+    "toasts": {
+      "bookmarkAddFailed": "Failed to add bookmark. Please check your internet connection and try again.",
+      "bookmarkAddPreventedDuplicate": "Failed to add bookmark because you already have a bookmark at the same location",
+      "bookmarkAddSucceeded": "Bookmark added",
+      "bookmarkDeleteFailed": "Failed to delete bookmark. Please check your internet connection and try again.",
+      "bookmarkDeleteSucceeded": "Bookmark deleted",
+      "commentEditFailed": "Failed to edit comment. Please check your internet connection and try again.",
+      "commentEditSucceeded": "Comment edited",
+      "dataLoadFailed": "Failed to load data. Please check your internet connection and try again.",
+      "reportAddFailed": "Failed to add report",
+      "reportAddRejectedTooManyReports": "You must wait 30 minutes between adding reports. Please try again later.",
+      "reportAddSucceeded": "Report added",
+      "reportDeleteFailed": "Failed to delete report. Please check your internet connection and try again.",
+      "reportDeleteSucceeded": "Report deleted"
+    }
+  }
+}

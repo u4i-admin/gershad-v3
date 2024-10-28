@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "orta.vscode-jest",
+    "pkief.material-icon-theme",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "stkb.rewrap",
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one"
+  ],
+  "unwantedRecommendations": []
+}

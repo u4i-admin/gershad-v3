@@ -1,0 +1,33 @@
+*.code-workspace
+!/.env
+/.env.local
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.packagehash
+.pnp.js
+.yalc
+yalc.lock
+
+# testing
+/coverage
+
+# Capacitor
+
+# next.js
+/.previousEnableMockGraphqlSdkValue
+/.next/
+/.next-test/
+/.packagehash
+/.previousEnableMockGraphqlSdkValue
+/android/app/google-services.json
+/build
+/coverage
+/ios/App/App/GoogleService-Info.plist
+/node_modules
+/out/
+/out-test/
+/src/generated/graphQl.ts
+/tsconfig.tsbuildinfo

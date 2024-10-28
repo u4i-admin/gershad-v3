@@ -1,0 +1,65 @@
+fragment PointOfInterest on PointOfInterestNode {
+  id
+  pk
+  token
+  address
+  arn
+  location
+  requested
+  created
+}
+
+query getPointsOfInterest($token: String, $orderBy: [String]) {
+  pointsOfInterest(token: $token, orderBy: $orderBy) {
+    ...PointOfInterest
+  }
+}
+
+mutation doCreatePointOfInterest(
+  $token: String!
+  $arn: String!
+  $latitude: Decimal!
+  $longitude: Decimal!
+  $address: String!
+) {
+  createPointOfInterest(
+    token: $token
+    arn: $arn
+    latitude: $latitude
+    longitude: $longitude
+    address: $address
+  ) {
+    success
+    errors
+    pointOfInterest {
+      ...PointOfInterest
+    }
+  }
+}
+mutation doUpdatePointOfInterest(
+  $pk: Int!
+  $token: String!
+  $latitude: Decimal!
+  $longitude: Decimal!
+  $address: String!
+) {
+  updatePointOfInterest(
+    token: $token
+    pk: $pk
+    latitude: $latitude
+    longitude: $longitude
+    address: $address
+  ) {
+    success
+    errors
+    pointOfInterest {
+      ...PointOfInterest
+    }
+  }
+}
+mutation doDeletePointOfInterest($pk: Int!, $token: String!) {
+  deletePointOfInterest(pk: $pk, token: $token) {
+    success
+    errors
+  }
+}

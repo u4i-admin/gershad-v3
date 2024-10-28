@@ -1,0 +1,268 @@
+{
+  "$schema": "./strings.schema.json",
+  "AboutPage": {
+    "pageTitle": "درباره ما"
+  },
+  "AddPointsOfInterestFab": {
+    "a11yLabel": "مکان ذخیره شده را اضافه کنید"
+  },
+  "BackgroundGeolocationDisabledNotice": {
+    "prefix": "نمی‌توانید اعلان دریافت کنید زیرا به برنامه اجازه نداده‌اید.",
+    "suffix": "برای تأیید اعلان."
+  },
+  "ClientSideErrorFallback": {
+    "description": "برنامه را مجدداً راه‌اندازی کنید. اگر مشکل همچنان ادامه داشت، لطفاً با ما تماس بگیرید و پیام خطای زیر را ارسال کنید:",
+    "title": "خطای غیرمنتظره"
+  },
+  "DeleteAndUpdateConfirmationDialog": {
+    "actions": {
+      "cancel": "لغو",
+      "delete": "حذف",
+      "update": "به‌روزرسانی"
+    }
+  },
+  "ErrorMessageDialog": {
+    "networkErrorDescription": "لطفاً اتصال شبکه خود را بررسی کرده و دوباره تلاش کنید.",
+    "networkErrorHeading": "خطای بارگذاری"
+  },
+  "FootnotesList": {
+    "footnotes": "پانوشت"
+  },
+  "FormSubmitButtonWithLoadingIndicator": {
+    "submittingA11yLabel": "در حال ارسال"
+  },
+  "GoogleMap": {
+    "locationDeniedError": "دسترسی به موقعیت مکانی رد شد. لطفاً از بخش تنظیمات، اجازه دسترسی به موقعیت مکانی را به گرشاد بدهید.",
+    "locationDisabledError": "Location services are disabled. Please turn on location services in the Settings app.",
+    "noInternetConnection": "عدم اتصال به اینترنت"
+  },
+  "GoogleMapsApiLoadingLogic": {
+    "googleMapsApiErrorMessage": "نقشه گوگل بارگیری نشد. لطفا اتصال اینترنت خود را بررسی کنید."
+  },
+  "HomePageSearchNav": {
+    "searchPlaceholder": "جستجوی مکان"
+  },
+  "HotzoneMarker": {
+    "totalReports": "مجموع گزارش‌ها:"
+  },
+  "KnowYourRightsPage": {
+    "pageTitle": "حقوق خود را بشناسید"
+  },
+  "KnowYourRightsSearchPage": {
+    "noResultsFound": "نتیجه‌ای پیدا نشد",
+    "pageTitle": "حقوق خود را بشناسید - جستجو"
+  },
+  "MenuDrawer": {
+    "primaryList": {
+      "map": "نقشه",
+      "pointsOfInterest": "مکان‌های ذخیره شده",
+      "reports": "گزارش‌ها"
+    },
+    "secondaryList": {
+      "about": "درباره ما",
+      "faqs": "پرسش و پاسخ حقوقی",
+      "sendFeedback": "ارسال بازخورد",
+      "settings": "تنظیمات",
+      "uninstallApp": "حذف اپلیکیشن",
+      "updateAppVersion": "به‌روزرسانی نسخه برنامه",
+      "userGuide": "راهنمای کاربر"
+    },
+    "updateConfirmationText": "نسخه جدید گرشاد در دسترس است. به‌روز رسانی کنم؟",
+    "version": "نسخه گرشاد"
+  },
+  "NotificationsPrerequisitesNotice": {
+    "android": {
+      "locationAlwaysPermissionLabel": "موقعیت مکانی: همیشه اجازه دهید",
+      "notificationsPermissionLabel": "اعلانات: تمام اعلانات گرشاد",
+      "physicalActivityPermissionLabel": "فعالیت بدنی: اجازه دهید"
+    },
+    "ios": {
+      "locationAlwaysPermissionLabel": "موقعیت مکانی: همیشه",
+      "motionAndFitnessPermissionLabel": "حرکت و تناسب اندام: اجازه داده شده",
+      "notificationsPermissionLabel": "اعلان‌ها: اجازه دهید"
+    }
+  },
+  "NotificationsPrerequisitesNoticeFunctionalityExplanation": {
+    "disabledBody": "برای اینکه گرشاد بتواند شما را از ورود به مناطق پرخطر و گزارش‌های جدید مطلع کند، به‌طور خودکار موقعیت مکانی شما را در پس‌زمینه (حتی زمانی که از برنامه استفاده نمی‌کنید) پیگیری می‌کند.",
+    "disabledHeading": "چه اتفاقی می‌افتد اگر اشتراک‌گذاری موقعیت مکانی در پس‌زمینه را فعال کنم؟",
+    "enabledBody": "گرشاد موقعیت مکانی شما را در پس‌زمینه پیگیری می‌کند تا شما را از گزارش‌ها و مناطق پرخطر مطلع کند.",
+    "enabledHeading": "اشتراک‌گذاری موقعیت مکانی در پس‌زمینه\nفعال است"
+  },
+  "NotificationsPrerequisitesNoticeListItem": {
+    "disabledA11yLabel": "غیرفعال",
+    "enabledAllyLabel": "فعال"
+  },
+  "NotificationsPermissionSettingsList": {
+    "backgroundLocationSharingSection": {
+      "disabledNotice": "برای فعال شدن ویژگی اعلان باید اشتراک‌گذاری «موقعیت مکانی» در پس زمینه را فعال کنید.",
+      "heading": "اشتراک‌گذاری موقعیت مکانی در پس‌زمینه"
+    },
+    "notificationsSection": {
+      "heading": "اعلان‌ها",
+      "labels": {
+        "enteringHotZone": "ورود به منطقه پر خطر",
+        "newReportCloseToYou": "گزارش جدید در نزدیکی شما",
+        "newReportCloseToYourBookmarkedLocation": "گزارش جدید در نزدیکی مکان ذخیره شده"
+      },
+      "toasts": {
+        "mustEnableNotificationsPermission": "برای فعال‌سازی این اعلان، باید اجازه «موقعیت مکانی» برنامه را به «اجازه همیشه» تغییر دهید."
+      }
+    }
+  },
+  "OnBoardingCarousel": {
+    "buttons": {
+      "next": "بعدی",
+      "prev": "قبلی",
+      "start": "شروع"
+    },
+    "slide1": {
+      "description": "گرشاد راه‌حلی است برای تردد در شهر، بدون روبرو شدن با گشت ارشاد",
+      "title": "گرشاد"
+    },
+    "slide2": {
+      "description": "گزارش گشت، لباس شخصی، گشت ون و یا نیروی سرکوب با گرشاد",
+      "title": "گزارش با گرشاد"
+    },
+    "slide3": {
+      "description": "اطلاعات بیشتر درباره هر گشت را به گزارش خود اضافه کنید",
+      "title": "توضیح گزارش"
+    }
+  },
+  "P2PSettingSection": {
+    "p2p": "تنظیمات همتا‌به‌همتا (P2P)"
+  },
+  "PageMeta": {
+    "pageTitleAndSiteTitle": "{pageTitle} — {siteTitle}"
+  },
+  "PointOfInterestListItem": {
+    "confirmDescription": "آیا می‌خواهید این مکان ذخیره شده را حذف کنید؟",
+    "toasts": {
+      "deleteSuccess": "مکان ذخیره شده حذف شد"
+    }
+  },
+  "PointsOfInterestPage": {
+    "noBookmarkedDescription": "مکان ذخیره‌شده‌ای وجود ندارد",
+    "pageTitle": "مکان‌های ذخیره شده"
+  },
+  "ReportActionDeleteButton": {
+    "confirmDescription": "آیا می‌خواهید این گزارش را حذف کنید؟"
+  },
+  "ReportDescriptionOverlay": {
+    "placeHolder": "اضافه کردن توضیحات"
+  },
+  "ReportErrorMessageDialog": {
+    "buttonText": "می‌فهمم",
+    "heading": "لطفا صبر کنید و دوباره امتحان کنید",
+    "invalid": "بی‌اعتبار",
+    "noInternetConnection": "اینترنت شما قطع است. لطفا بعدا دوباره امتحان کنید!",
+    "unexpected": "خطای غیرمنتظره، لطفا بعدا دوباره امتحان کنید"
+  },
+  "ReportOverlayReportLocationButton": {
+    "buttonText": "گزارش این مکان"
+  },
+  "ReportTypeSelection": {
+    "header": "انتخاب نوع گزارش"
+  },
+  "ReportsPage": {
+    "description": "گزارش‌ها",
+    "title": "گزارش‌ها"
+  },
+  "SearchBox": {
+    "placeholder": "اینجا جستجو کنید…"
+  },
+  "SettingsPage": {
+    "placeholderText": "هر کس حق آزادی عقیده و بیان دارد. این حق شامل آزادی داشتن عقاید بدون مداخله و جستجو، دریافت و انتشار اطلاعات و عقاید از طریق هر رسانه و بدون توجه به مرزها می‌شود.",
+    "title": "تنظیمات"
+  },
+  "UninstallApplicationSection": {
+    "heading": "حذفِ اپلیکیشن",
+    "uninstallApplicationFromMenu": "حذف از طریق منو"
+  },
+  "UserGuidePage": {
+    "pageTitle": "راهنمای کاربر"
+  },
+  "UserReportCommentsForm": {
+    "commentTextAreaPlaceholder": "اضافه کردن نظرات"
+  },
+  "UserReportGroupMembers": {
+    "description": "توضیحات",
+    "heading": "همه گزارش‌ها"
+  },
+  "UserReportGroupMinimal": {
+    "numberOfReportsSuffix": "بار",
+    "reportDistanceSuffix": "متر"
+  },
+  "shared": {
+    "backgroundGeoLocation": {
+      "backgroundPermissionRationale": {
+        "message": "گرشاد نیاز به اجازه دسترسی موقعیت مکانی در پس‌زمینه دارد تا بتواند بر اساس تنظیمات اعلان‌های شما، اعلان‌ها را برایتان ارسال کند.",
+        "negativeAction": "غیرفعال بگذارید",
+        "positiveAction": "در تنظیمات اندروید فعال کنید",
+        "title": "موقعیت مکانی در پس‌زمینه"
+      },
+      "notification": {
+        "text": "گرشاد موقعیت مکانی شما را در پس‌زمینه پیگیری می‌کند تا بتواند بر اساس تنظیمات اعلان‌های شما، اعلان‌ها را برایتان ارسال کند.",
+        "title": "گرشاد فعال است"
+      }
+    },
+    "beepassDescription": "با کمک فیلترشکن بی‌پس",
+    "button": {
+      "all": "همه",
+      "bookmark": "ذخیره",
+      "bookmarkThisLocation": "ذخیره این مکان",
+      "bookmarked": "ذخیره شد",
+      "confirm": "تایید",
+      "delete": "حذف",
+      "edit": "ویرایش",
+      "goBack": "بازگشت",
+      "iUnderstand": "می‌فهمم",
+      "no": "خیر",
+      "save": "ذخیره",
+      "share": "هم‌رسانی",
+      "submit": "ارسال",
+      "yes": "بله"
+    },
+    "notifications": {
+      "hotZoneEntered": {
+        "description": "مراقب باشید! وارد منطقه پرخطر می‌شوید.",
+        "title": "هشدار منطقه پرخطر!"
+      },
+      "newReportsNearDevice": {
+        "description": "هشیار باشید! گزارش‌های امنیت جدیدی در نزدیکی شما وجود دارد.",
+        "title": "گزارش‌های جدید نزدیک شما"
+      },
+      "newReportsNearPoi": {
+        "description": "یک گزارش جدید در محدوده مکان‌های ذخیره شده شما وجود دارد/ ثبت شد",
+        "title": "گزارش جدید در نقطه ذخیره شده"
+      }
+    },
+    "reportTypes": {
+      "all": "همه",
+      "permanent": "دائمی",
+      "police": "گشت",
+      "repForce": "نیروی سرکوب",
+      "stopCheck": "ایست بازرسی",
+      "van": "گشت ون"
+    },
+    "siteTitle": "گرشاد",
+    "switchLabel": {
+      "off": "خاموش",
+      "on": "روشن"
+    },
+    "toasts": {
+      "bookmarkAddFailed": "ذخیره مکان ناموفق بود. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+      "bookmarkAddPreventedDuplicate": "ذخیره مکان ناموفق بود زیرا در همان مکان قبلاً نشانه‌گذاری شده است.",
+      "bookmarkAddSucceeded": "مکان ذخیره شده اضافه شد",
+      "bookmarkDeleteFailed": "حذف مکان ذخیره شده ناموفق بود. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+      "bookmarkDeleteSucceeded": "مکان ذخیره شده حذف شد.",
+      "commentEditFailed": "ویرایش نظر ناموفق بود. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+      "commentEditSucceeded": "نظر شما ویرایش شد.",
+      "dataLoadFailed": "بارگذاری داده‌ها ناموفق بود. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+      "reportAddFailed": "ثبت گزارش ناموفق بود.",
+      "reportAddRejectedTooManyReports": "هر ۳۰ دقیقه یک گزارش می‌توانید ثبت کنید. لطفاً بعداً دوباره تلاش کنید.",
+      "reportAddSucceeded": "گزارش اضافه شد.",
+      "reportDeleteFailed": "حذف گزارش ناموفق بود. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+      "reportDeleteSucceeded": "گزارش حذف شد"
+    }
+  }
+}

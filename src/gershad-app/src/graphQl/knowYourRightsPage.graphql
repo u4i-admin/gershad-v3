@@ -1,0 +1,67 @@
+fragment FaqBlock on FAQBlock {
+  faqId
+  title
+  description
+  faqText
+}
+
+fragment IssueBlock on IssueBlock {
+  issueId
+  title
+  description
+  issueFootnotes
+  faqs {
+    ...FaqBlock
+  }
+}
+
+fragment TopicBlock on TopicBlock {
+  topicId
+  title
+  issues {
+    ...IssueBlock
+  }
+}
+
+fragment ChapterSectionBlock on ChapterSectionBlock {
+  sectionId
+  title
+  description
+  sectionText
+  sectionFootnotes
+}
+
+fragment ChapterBlock on ChapterBlock {
+  chapterId
+  title
+  description
+  sections {
+    ...ChapterSectionBlock
+  }
+}
+
+fragment KnowYourRightsPage on KnowYourRightsPageNode {
+  title
+  chapters {
+    ...ChapterBlock
+  }
+}
+
+fragment FaqsPage on KnowYourRightsPageNode {
+  faqTitle
+  faqTopics {
+    ...TopicBlock
+  }
+}
+
+query getKnowYourRightsPage {
+  knowYourRightsPage {
+    ...KnowYourRightsPage
+  }
+}
+
+query getFaqsPage {
+  knowYourRightsPage {
+    ...FaqsPage
+  }
+}
