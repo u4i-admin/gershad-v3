@@ -41,6 +41,7 @@ class ReportAdmin(LeafletGeoAdminMixin, admin.ModelAdmin):
         'description',
         'type',
         'permanent',
+        'verified',
         'deleted',
         'location',
         'latitude',
